@@ -45,12 +45,13 @@ __This will also be bold__
 
 ## Code blocks
 
-We use the System.out.println() statement in Java to print a message to the screen.
+We use the `System.out.println()` statement in Java to print a message to the screen.
 ```
 System.out.println("Fenced");
 System.out.println("code");
 System.out.println("block");
 ```
+
 ```java
 System.out.println("Language specific code block");
 ```
