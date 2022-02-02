@@ -8,7 +8,7 @@ In the first week of class I learned that Java functions pretty similarly to Pyt
 
 ## Chapter 1
 
-Write your reflection here.
+We started the week by talking about if statements and comparing them to how it is written in python. There isn't a very bit difference between the two but Java need parenthases around the conditional statement and anything you want ran under the condition must be inside the curly brackets. We also learned that Java does not function with decalared variables that have no value to them. To assign multiple variables on one line they must be delcared and assigned at the same time. If statement operators in Java are the same as they are in python. Strings and boxes should be compared using `equals()` instead of `a == a`. `equals()` is used to see if objects are equal.`System.pit.println(name1.equals(name2))` is an example. Class data types typically start with a captial letter while non-class data types start with a lower case letter. For loops in java require a varible to be initialized, a boolean expression that must be true atleast once and eventually be false, and an iteration `for(int i = 0; 1 < 10; i++)`. Depending on where the i is comapred to the ++ it will either mean run the line then add one, or add one then run the line `i++ ++i`. Also we started learning about a few different ways to format numers, such as `System.out.printf("%d Gallons is %.4f Liters%n", gallons, liters);`
 
 ## Chapter 2
 

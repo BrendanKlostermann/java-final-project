@@ -1,23 +1,28 @@
-/**
- * App
- */
-import java.text.DecimalFormat;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("What is your weight?");
-        try {
-        double weight = scan.nextDouble();
-        double gravity = 0.17;
-        double moon_weight = weight * gravity;
-        DecimalFormat df = new DecimalFormat("#.0");
-        String formatted_moon = df.format(moon_weight);
-        System.out.println("On the moon you would weight " + formatted_moon + "lbs.");
-        } catch(InputMismatchException e) {
-            System.out.println("Invalid number");
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+        while (true) {
+            String menuTitle = "Main Menu";
+            String prompt = "Select an chapter";
+            String[] menuOptions = {
+                    "Chapter 1"
+            };
+            choice = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions, scanner);
+            if (choice == 0)
+                continue;
+            if (choice == menuOptions.length + 1)
+                break;
+            switch (choice) {
+                case 1:
+                    new Chapter1().handleTask(scanner);
+                    break;
+            }
+            UIUtility.pressEnterToContinue(scanner);
         }
+        System.out.println("\nProgram complete. Goodbye.\n");
+        scanner.close();
     }
 }
