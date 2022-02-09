@@ -37,16 +37,35 @@ public class Chapter1 implements TaskHandler {
     public void exercise1(Scanner in) {
         UIUtility.showMenuTitle("Exercise 1");
         // Your code here
+
+        double first = InputUtility.getDouble("Please enter a number: ", in);
+        double second = InputUtility.getDouble("Please enter another number: ", in);
+        if(first > second){
+            System.out.println("Largest is: " + first);
+        } else {
+            System.out.println("Largest is: " + second);
+        }
     }
 
     public void exercise2(Scanner in) {
         UIUtility.showMenuTitle("Exercise 2");
         // Your code here
+
+        double first = InputUtility.getDouble("Please enter a number: ", in);
+        double second = InputUtility.getDouble("Please enter another number: ", in);
+        double average = (first + second)/2;
+        System.out.printf("The average is %.2f",average);
     }
 
     public void exercise3(Scanner in) {
         UIUtility.showMenuTitle("Exercise 3");
         // Your code here
+        double radius = InputUtility.getDouble("Please enter the radius of the circle: ", in);
+        double circ = 2 * Math.PI * radius;
+        double area = Math.PI * (radius*radius);
+        System.out.printf("Circumference is %.2f\n", circ);
+        System.out.printf("Area is %.2f\n", area);
+
     }
 
     public void sampleExercise(Scanner in) {

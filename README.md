@@ -12,4 +12,4 @@ We started the week by talking about if statements and comparing them to how it 
 
 ## Chapter 2
 
-Write your reflection here.
+In chapter 2 I started off by learning about primitive (non class based) data types. Things booleans, ints. doubles. Booleans are the smallest data type in Java because it only has 2 possible values. You can not assign a larger value than a data type can hold. When assigning longs sometime you need to use a L at the end of the value to not get an error. Java requires double quotes around strings and single quotes around characters. I learned that the Character data type can only hold a single charcter in it. You could also assign a number to the character datatype and it will be equivalent to the character in the Unicode values. Only use + - * and / when dealing with primitive datatypes. We got an introduction to using Math library for more complicated calculations in our code. Using things like `Math.floor()` will round numbers down, and `Math.ceil()` will round numbers up and return as a double. We also breifly touched on nested for loops in Java. We also covered escape characters during this chapter.
