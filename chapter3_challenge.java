@@ -14,13 +14,13 @@ public class chapter3_challenge {
 
         while (true) {
 
-            input_latitude = InputUtility.getDouble("Please enter a Latitude: ", scanner);
+            input_latitude = InputUtility.getDouble("Please enter a Latitude", scanner);
             if (input_latitude < -90.0 || input_latitude > 90.0) {
                 System.out.println("Invalid lattitude");
                 continue;
             }
 
-            input_longitude = InputUtility.getDouble("Please enter a Longitude: ", scanner);
+            input_longitude = InputUtility.getDouble("Please enter a Longitude", scanner);
             if (input_longitude < -180.0 || input_longitude > 180.0) {
                 System.out.println("Invalid longitude");
                 continue;

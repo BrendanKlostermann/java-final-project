@@ -38,5 +38,7 @@ public class Demo {
         
         System.out.println(Math.floor(Math.random()*(7 - 1) + 1));
         System.out.println("One\nTwo\nThree");
-    }
 }
+}
+
+    

@@ -16,3 +16,6 @@ In chapter 2 I started off by learning about primitive (non class based) data ty
 
 ## Chapter 3
 
+## Chapter 4
+
+In chapter 4 we started talking about classes, objects, and methods. Java is pretty similar to C# in many ways when it comes to classes and objects. The one thing that confused me previously was constructor methods. I wasn't sure what they were or how to use them. Constructors are used to initialize class attributes. which can then be instantiated to create an object by calling the constructor method. constructors will always have a void return type but doesn't need specified. Another thing that confused me at first was reference variables. When one object-type variable gets assigned to another it creates a reference so when one of the two variables get changed it will effect both of the referenced variables. They are both assigned to the same value.
