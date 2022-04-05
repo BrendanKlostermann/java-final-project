@@ -16,6 +16,8 @@ In chapter 2 I started off by learning about primitive (non class based) data ty
 
 ## Chapter 3
 
+This chapter we covered control statements. Things like ifs and switches. the syntax for an if statement in java is very similar to other languages like python and c#. In the if statement if you want to check for equality of strings you can not use the equals sign. You must use the String class `equals()` method. We also covered nested if statements, which was similar to python. Not much new information there besides a different language to write it in. For else if ladders in Java the syntax is slighty different than that of python but otherwise very similar. We also touched on dates in Java and how there is a LocalDate class in Java. To create a LocalDate object you have to use one of its static methods. We have been using `.now()` the most.
+
 ## Chapter 4
 
 In chapter 4 we started talking about classes, objects, and methods. Java is pretty similar to C# in many ways when it comes to classes and objects. The one thing that confused me previously was constructor methods. I wasn't sure what they were or how to use them. Constructors are used to initialize class attributes. which can then be instantiated to create an object by calling the constructor method. constructors will always have a void return type but doesn't need specified. Another thing that confused me at first was reference variables. When one object-type variable gets assigned to another it creates a reference so when one of the two variables get changed it will effect both of the referenced variables. They are both assigned to the same value.
