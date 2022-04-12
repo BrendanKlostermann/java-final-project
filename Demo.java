@@ -38,6 +38,11 @@ public class Demo {
         
         System.out.println(Math.floor(Math.random()*(7 - 1) + 1));
         System.out.println("One\nTwo\nThree");
+
+        int result = 0;
+            for(int k = 10; k > 0; k = k - 2) {
+                result += k;
+            }System.out.println(result);
 }
 }
 

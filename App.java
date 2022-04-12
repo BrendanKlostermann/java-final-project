@@ -16,7 +16,8 @@ public class App {
                     "Chapter 6",
                     "Chapter 7",
                     "Chapter 8",
-                    "Chapter 9"
+                    "Chapter 9",
+                    "Chapter 5 challenge"
             };
             choice = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions, scanner);
             if (choice == 0)
@@ -50,6 +51,9 @@ public class App {
                     break;
                 case 9:
                     new Chapter9().handleTask(scanner);
+                    break;
+                case 10:
+                    new Chapter5_challenge().handleTask(scanner);
                     break;
             }
             UIUtility.pressEnterToContinue(scanner);
