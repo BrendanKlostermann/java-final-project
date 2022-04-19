@@ -100,7 +100,7 @@ public class Chapter4 implements TaskHandler {
 
         public Fraction simplify(){
             int gdc = Fraction.greatestCommonDivisor(this.numerator, this.denominator);
-            Fraction fraction = new Fraction(gdc, (denominator/gdc));
+            Fraction fraction = new Fraction(numerator/gdc, (denominator/gdc));
             if((fraction.getNumerator() >= 0 && fraction.getDenominator() < 0) || (fraction.getNumerator() < 0 && fraction.getDenominator() < 0)){
                 fraction.setNumerator(fraction.getNumerator()*-1);
                 fraction.setDonminator(fraction.getDenominator()*-1);

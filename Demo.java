@@ -22,8 +22,8 @@ public class Demo {
 
         int age = 40; // integar
 
-        long a = 9999999999L; // long integar
-        System.out.println(a);
+        // long a = 9999999999L; // long integar
+        // System.out.println(a);
 
         float z = 0; // single-precision floating point
 
@@ -43,7 +43,19 @@ public class Demo {
             for(int k = 10; k > 0; k = k - 2) {
                 result += k;
             }System.out.println(result);
+
+
+        String school = "Kirkwood";
+        String tabs = "";
+        String upperSchool = school.toUpperCase();
+        for(int i = 0; i < school.length(); i++){
+            System.out.println(tabs + upperSchool.charAt(i));
+            tabs = tabs + "\t";
+        }
+    
+    }
 }
-}
+
+
 
     
