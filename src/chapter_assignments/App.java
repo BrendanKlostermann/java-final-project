@@ -1,15 +1,6 @@
+package src.chapter_assignments;
 import java.util.Scanner;
 
-import src.chapter_assignments.Chapter1;
-import src.chapter_assignments.Chapter2;
-import src.chapter_assignments.Chapter3;
-import src.chapter_assignments.Chapter4;
-import src.chapter_assignments.Chapter5;
-import src.chapter_assignments.Chapter5_challenge;
-import src.chapter_assignments.Chapter6;
-import src.chapter_assignments.Chapter7;
-import src.chapter_assignments.Chapter8;
-import src.chapter_assignments.Chapter9;
 import src.utilities.UIUtility;
 
 public class App {

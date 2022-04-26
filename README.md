@@ -47,15 +47,15 @@ In chapter 5 I was introduced to Arrays and string operators. I learned that an 
 | + vehicle|
 :---------
 | - make : String <br> - model : String <br> - year : String <br> - color : String <br> - bodyStyle : String|
-| <<create>> + vehicle()|
-| <<create>> + vehicle(make : String, model : String, year : String)|
-| + getMake() : String|
-| + setMake(make : String) : void|
-| - validateMake(make : String) : void|
-| + getModel() : String|
-| + setModel(model : String) : void|
-| - validateModel(model : String) : void|
-| + getYear() : String|
-| + setYear(Year : String) : void|
-| - validateYear(year : String) : void|
+| <<create>> + vehicle()<br>
+| <<create>> + vehicle(make : String, model : String, year : String)<br>
+| + getMake() : String <br>
+| + setMake(make : String) : void <br>
+| - validateMake(make : String) : void <br>
+| + getModel() : String <br>
+| + setModel(model : String) : void <br>
+| - validateModel(model : String) : void <br>
+| + getYear() : String <br>
+| + setYear(Year : String) : void<br>
+| - validateYear(year : String) : void <br>
 | + toString() : String|
