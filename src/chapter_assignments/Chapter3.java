@@ -1,4 +1,9 @@
+package src.chapter_assignments;
 import java.util.Scanner;
+
+import src.utilities.InputUtility;
+import src.utilities.TaskHandler;
+import src.utilities.UIUtility;
 
 public class Chapter3 implements TaskHandler {
     @Override
@@ -36,7 +41,14 @@ public class Chapter3 implements TaskHandler {
 
     public void exercise1(Scanner in) {
         UIUtility.showMenuTitle("Exercise 1");
-        // Your code here
+        
+        int num1 = InputUtility.getInt("Please enter your first number", in);
+        int num2 = InputUtility.getInt("Please enter your second number", in);
+        for(int i = num1; i <= num2; i++){
+            if(i%2 == 0){
+                System.out.println(i);
+            }
+        }
 
        
     }

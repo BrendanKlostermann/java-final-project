@@ -1,4 +1,7 @@
+package src.chapter_assignments;
 import java.util.Scanner;
+
+import src.utilities.InputUtility;
 
 public class chapter3_challenge {
     public static void main(String[] args) {

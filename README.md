@@ -25,3 +25,37 @@ In chapter 4 we started talking about classes, objects, and methods. Java is pre
 ## Chapter 5
 
 In chapter 5 I was introduced to Arrays and string operators. I learned that an array is fixed length and you can not add more items into an array. Only one type of data may be stored in an array. There are multiple way to assign an array but the simplest way is to just use `int[] list = {1,2,3,4,5}`. Or you can assign how many values there can be and not actually assign anything to the positions `int[] list = new int[10]`. We covered a few different things you can do with an array such as sorting, finding min and max values, and finding mean, median, and mode. We also covered how to copy arrays to a new array using loops to grab the values from the first and setting them to the second. Finally in this chapter we covered some string operators you can use. one interesting thing we covered was how you can use `charAt()` to search for a char at a certain position in a string almost like the string itself is an array. A few more operators we covered are things like `equals()` and `length()`.
+
+## Final Project User Stories
+
+- As a car enthusiast I want to be able to add cars to my garage so that I can see my collection of cars.
+
+- As a car enthusiast I want to be able to sort my cars by brand name so I can group my cars by brand.
+
+- As a car enthusiast I want to be able to sort my car by year so I can see my newest cars.
+
+- As a car enthusiast I want to be able to only look at my trucks so when I need to tow something I can.
+
+- As a car enthusiast I want to be able to remove cars from my garage when I sell one of my cars.
+
+- As a car enthusiast I want ot me able to swap car positions so I can see them the way I want to.
+
+- As a car enthusiast I want to be able to see all the information about a single car so I can see the statistics
+
+## Class Diagram
+
+| + vehicle|
+:---------
+| - make : String <br> - model : String <br> - year : String <br> - color : String <br> - bodyStyle : String|
+| <<create>> + vehicle()|
+| <<create>> + vehicle(make : String, model : String, year : String)|
+| + getMake() : String|
+| + setMake(make : String) : void|
+| - validateMake(make : String) : void|
+| + getModel() : String|
+| + setModel(model : String) : void|
+| - validateModel(model : String) : void|
+| + getYear() : String|
+| + setYear(Year : String) : void|
+| - validateYear(year : String) : void|
+| + toString() : String|

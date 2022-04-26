@@ -1,4 +1,9 @@
+package src.chapter_assignments;
 import java.util.Scanner;
+import src.utilities.InputUtility;
+import src.utilities.TaskHandler;
+import src.utilities.UIUtility;
+
 import java.util.*;
 
 public class Chapter5_challenge implements TaskHandler {
@@ -126,6 +131,5 @@ public class Chapter5_challenge implements TaskHandler {
             list[i] = list[list.length - 1 - i];
             list[list.length - 1 - i] = temp;
         }
-
     }
 }
