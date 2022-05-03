@@ -115,7 +115,7 @@ public class Vehicle implements Comparable<Vehicle>{
 
     // to String
 
-    public String toString(String make, String model, String year) {
+    public String toString() {
         return String.format("Make: %s\n Model: %s\n Year: %s\n Color: %s\n BodyStyle: %s", make, model, year, color,
                 bodyStyle);
     }

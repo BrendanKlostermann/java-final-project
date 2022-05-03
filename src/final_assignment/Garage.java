@@ -1,8 +1,6 @@
 package src.final_assignment;
-import src.final_assignment.Vehicle;
 import src.utilities.InputUtility;
 import src.utilities.UIUtility;
-import src.final_assignment.Truck;
 import java.util.Scanner;
 
 
@@ -26,124 +24,79 @@ public class Garage {
 
 
             String type = InputUtility.validateUserString("Would you like to enter a Truck, or vehicle?", new String[]{"car","Truck"}, in);
+
+
             Vehicle vehicle = new Vehicle();
-            if(type.equals("car")){
+            
+            // For type Car
 
-                while(true){
-                    String make = InputUtility.getString("Please enter a vehicle make: ", in);
-                    try {
-                        vehicle.setMake(make);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
+            while(true){
+                String make = InputUtility.getString("Please enter a vehicle make: ", in);
+                try {
+                    vehicle.setMake(make);
+                    break;
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
                 }
+            }
 
-                while(true){
-                    String model = InputUtility.getString("Please enter a vehicle model: ", in);
-                    try {
-                        vehicle.setModel(model);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
+            while(true){
+                String model = InputUtility.getString("Please enter a vehicle model: ", in);
+                try {
+                    vehicle.setModel(model);
+                    break;
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
                 }
+            }
 
-                while(true){
-                    String year = InputUtility.getString("Please enter a four digit year: ", in);
-                    try {
-                        vehicle.setYear(year);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
+            while(true){
+                String year = InputUtility.getString("Please enter a four digit year: ", in);
+                try {
+                    vehicle.setYear(year);
+                    break;
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
                 }
+            }
 
-                while(true){
-                    String color = InputUtility.getString("Please enter a vehicle color: ", in);
-                    try {
-                        vehicle.setColor(color);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
+            while(true){
+                String color = InputUtility.getString("Please enter a vehicle color: ", in);
+                try {
+                    vehicle.setColor(color);
+                    break;
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
                 }
-                
-                while(true){
-                    String bodyStyle = InputUtility.getString("Please enter a vehicle bodyStyle: ", in);
-                    try {
-                        vehicle.setBodyStyle(bodyStyle);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
+            }
+            
+            while(true){
+                String bodyStyle = InputUtility.getString("Please enter a vehicle bodyStyle: ", in);
+                try {
+                    vehicle.setBodyStyle(bodyStyle);
+                    break;
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
                 }
-
-                vehicles[vehicleCount] = vehicle;
-                vehicleCount++;
-                UIUtility.pressEnterToContinue(in);
             }
 
 
 
-            else{
+            // For type Truck
+            
+            if(type.equalsIgnoreCase("truck")){
+                Truck truck = new Truck();
 
-                vehicle = new Truck();
-
-                while(true){
-                    String make = InputUtility.getString("Please enter a vehicle make: ", in);
-                    try {
-                        vehicle.setMake(make);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
-
-                while(true){
-                    String model = InputUtility.getString("Please enter a vehicle model: ", in);
-                    try {
-                        vehicle.setModel(model);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
-
-                while(true){
-                    String year = InputUtility.getString("Please enter a four digit year: ", in);
-                    try {
-                        vehicle.setYear(year);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
-
-                while(true){
-                    String color = InputUtility.getString("Please enter a vehicle color: ", in);
-                    try {
-                        vehicle.setColor(color);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
-                
-                while(true){
-                    String bodyStyle = InputUtility.getString("Please enter a vehicle bodyStyle: ", in);
-                    try {
-                        vehicle.setBodyStyle(bodyStyle);
-                        break;
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
+                truck.setMake(vehicle.getMake());
+                truck.setModel(vehicle.getModel());
+                truck.setYear(vehicle.getYear());
+                truck.setColor(vehicle.getColor());
+                truck.setBodyStyle(vehicle.getBodyStyle());
 
                 while(true){
                     String towCapacity = InputUtility.getString("Please enter the trucks tow capacity: ", in);
                     try {
-                        vehicle.setTowCapacity(towCapacity);
+                        truck.setTowCapacity(towCapacity);
                         break;
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
@@ -153,13 +106,19 @@ public class Garage {
                 while(true){
                     String fourWheelDrive = InputUtility.getString("Does this truck have 4x4:  ", in);
                     try {
-                        vehicle.setFourWheelDrive(fourWheelDrive);
+                        truck.setFourWheelDrive(fourWheelDrive);
                         break;
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
-                }
+                }  
+                
+                vehicles[vehicleCount] = truck;
+                vehicleCount++;
+                UIUtility.pressEnterToContinue(in);
+            }
 
+            if(type.equalsIgnoreCase("car")){
                 vehicles[vehicleCount] = vehicle;
                 vehicleCount++;
                 UIUtility.pressEnterToContinue(in);
@@ -169,7 +128,6 @@ public class Garage {
         else{
             System.out.println("The Garage is full and can not add another vehicle.");
         }
-
     }
 
 
@@ -180,9 +138,8 @@ public class Garage {
 
         for(int i = 0; i < vehicles.length; i++)
             if(vehicles[i] != null){
-                System.out.println(vehicles[i]);
+                System.out.println(vehicles[i].toString()+"\n");
             }
-
     }
 
 
@@ -193,6 +150,4 @@ public class Garage {
         }
         return full;
     }
-
-
 }

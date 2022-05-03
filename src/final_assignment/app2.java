@@ -2,7 +2,7 @@ package src.final_assignment;
 import java.util.Scanner;
 import src.utilities.UIUtility;
 
-public class app2 {
+public class App2 {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;

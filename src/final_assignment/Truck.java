@@ -17,7 +17,10 @@ public class Truck extends Vehicle{
         this.fourWheelDrive = fourWheelDrive;
     }
 
+
+    
     // towCapacity methods get set validate
+    
     public String getTowCapacity() {
         return towCapacity;
     }
@@ -33,7 +36,10 @@ public class Truck extends Vehicle{
         }
     } // end of towCapacity
 
+
+
     // fourWheelDrive methods get set validate
+
     public String getFourWheelDrive(){
         return fourWheelDrive;
     }
