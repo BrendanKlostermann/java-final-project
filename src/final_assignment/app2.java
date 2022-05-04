@@ -13,12 +13,13 @@ public class App2 {
             String[] menuOptions = {
                     "Add a vehicle",
                     "View list of all vehicles",
-                    // "Remove a vehicle",
-                    // "Update a vehicle",
+                    "View all by Make",
+                    "Update a vehicle",
+                    "Move a vehicle",
+                    "View a vehicle",
+                    "Remove a vehicle"
                     // "Sort vehicles by make",
-                    // "View the towing Capacity of a truck",
-                    // "View all information on a vehicle",
-                    // "Swap position of two vehicles",
+                    // "Sort vehicles by model",
                     
             };
             choice = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions, scanner);
@@ -33,21 +34,21 @@ public class App2 {
                 case 2:
                     garage.viewAll();
                     break;
-                // case 3:
-                //     new Chapter3().handleTask(scanner);
-                //     break;
-                // case 4:
-                //     new Chapter4().handleTask(scanner);
-                //     break;
-                // case 5:
-                //     new Chapter5().handleTask(scanner);
-                //     break;
-                // case 6:
-                //     new Chapter6().handleTask(scanner);
-                //     break;
-                // case 7:
-                //     new Chapter7().handleTask(scanner);
-                //     break;
+                case 3:
+                    garage.viewAllByMake();;
+                    break;
+                case 4:
+                    garage.updateVehicle();
+                    break;
+                case 5:
+                    garage.moveAVehicle();;
+                    break;
+                case 6:
+                    garage.viewAVehicle();
+                    break;
+                case 7:
+                    garage.removeVehicle();
+                    break;
                 // case 8:
                 //     new Chapter8().handleTask(scanner);
                 //     break;

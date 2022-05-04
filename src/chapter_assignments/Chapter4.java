@@ -53,9 +53,9 @@ public class Chapter4 implements TaskHandler {
 
 
 
-    public class Fraction{
-        private int numerator;
-        private int denominator;
+class Fraction{
+    private int numerator;
+    private int denominator;
 
         public Fraction(){
             numerator = 1;
@@ -103,19 +103,38 @@ public class Chapter4 implements TaskHandler {
         }
 
         public Fraction simplify(){
-            int gdc = Fraction.greatestCommonDivisor(this.numerator, this.denominator);
-            Fraction fraction = new Fraction(numerator/gdc, (denominator/gdc));
-            if((fraction.getNumerator() >= 0 && fraction.getDenominator() < 0) || (fraction.getNumerator() < 0 && fraction.getDenominator() < 0)){
-                fraction.setNumerator(fraction.getNumerator()*-1);
-                fraction.setDonminator(fraction.getDenominator()*-1);
-            }
+            int gcd = Fraction.greatestCommonDivisor(this.numerator, this.denominator);
             
+            Fraction fraction = new Fraction(numerator/gcd,denominator/gcd);
+            if(fraction.numerator >= 0 && fraction.denominator < 0){
+                fraction.numerator *= -1;
+                fraction.denominator *= -1;
+            } else if (fraction.numerator < 0 && fraction.denominator < 0){
+                fraction.numerator *= -1;
+                fraction.denominator *= -1;
+            }
+
             return fraction;
         }
 
         public String mixedNumber(){
             
-            return "";
+            this.simplify();
+            if(this.denominator == 1){
+                return Integer.toString(numerator);
+            }
+            else if(this.numerator < 0){
+                int whole = (numerator/denominator) * -1;
+                int remain = (numerator%denominator) * -1;
+                return (String.format("%d %d/%d", whole,remain,denominator));
+            } else if(this.numerator > this.denominator){
+                int whole = numerator/denominator;
+                int remain = numerator%denominator;
+                return (String.format("%d %d/%d", whole,remain,denominator));
+            }          
+            else{
+                return this.simplify().toString();
+            }
         }
 
     }
@@ -150,13 +169,13 @@ public class Chapter4 implements TaskHandler {
         try {
             Fraction fraction = new Fraction(3, 0);
         } catch (IllegalArgumentException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
         Fraction fraction2 = new Fraction();
         try {
             fraction2.setDonminator(0);
         } catch (IllegalArgumentException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
        
 
@@ -197,7 +216,22 @@ public class Chapter4 implements TaskHandler {
 
     public void exercise6(Scanner in) {
         UIUtility.showMenuTitle("exercise 6");
-        // Your code here
+        Fraction fraction1 = new Fraction(4, 1);
+        System.out.println(fraction1.mixedNumber());
+        Fraction fraction2 = new Fraction(0,4);
+        System.out.println(fraction2.mixedNumber());
+        Fraction fraction3 = new Fraction(4, 4);
+        System.out.println(fraction3.mixedNumber());
+        Fraction fraction4 = new Fraction(8, 4);
+        System.out.println(fraction4.mixedNumber());
+        Fraction fraction5 = new Fraction(4, 8);
+        System.out.println(fraction5.mixedNumber());
+        Fraction fraction6 = new Fraction(-13, 5);
+        System.out.println(fraction6.mixedNumber());
+        Fraction fraction7 = new Fraction(13, -5);
+        System.out.println(fraction7.mixedNumber());
+        Fraction fraction8 = new Fraction(-13, -5);
+        System.out.println(fraction8.mixedNumber());
 
         
     }

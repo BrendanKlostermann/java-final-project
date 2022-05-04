@@ -102,9 +102,14 @@ public class Demo {
     System.out.println(Arrays.toString(lottoNumbers));
     System.out.println();
 
-        }
+    System.out.println("I read \"Java: A Beginner\'s Guide\", by Herbert Schildt");
     
     }
+}
+
+    
+
+
 
 
 

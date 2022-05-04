@@ -28,9 +28,9 @@ In chapter 5 I was introduced to Arrays and string operators. I learned that an 
 
 ## Final Project User Stories
 
-- As a car enthusiast I want to be able to add cars to my garage so that I can see my collection of cars.
+- As a car enthusiast I want to be able to add cars to my garage so that I can see my collection of cars. X
 
-- As a car enthusiast I want to be able to sort my cars by brand name so I can group my cars by brand.
+- As a car enthusiast I want to be able to sort my cars by brand name so I can group my cars by brand. 
 
 - As a car enthusiast I want to be able to sort my car by year so I can see my newest cars.
 
