@@ -130,8 +130,6 @@ public class Garage {
         }
     }
 
-
-
     public void viewAll(){
 
         UIUtility.showMenuTitle("View all vehicles in the Garage");
@@ -146,6 +144,34 @@ public class Garage {
         // make copy of array
         //sort copy of array
         // print values
+
+        //make copy of original list
+        Vehicle[] copy;
+        copy = new Vehicle[vehicles.length];
+        for(int i = 0; i<vehicles.length;i++){
+            if(vehicles[i] != null){
+            copy[i] = vehicles[i];
+            }
+        }
+        
+        //sort copied list
+        for(int i = 0; i < copy.length; i++){
+            if(copy[i+1] == null){
+                break;
+            }
+            if(copy[i].getMake().compareToIgnoreCase(copy[i+1].getMake()) > 0){
+                Vehicle temp = copy[i];
+                copy[i] = copy[i+1];
+                copy[i+1] = temp;
+            }
+        }
+
+        //print sorted list
+        for(int i = 0; i < copy.length; i++){
+            if(copy[i] != null){
+                System.out.println(copy[i].toString()+"\n");
+            }
+        }
 
 
     }
